@@ -15,6 +15,7 @@ CLAUDE.md
 .github/workflows/pages.yml        # publishes the whole site/ folder (upload-pages-artifact path: site)
 site/                              # everything that gets published
   index.html                       # pt-BR page, site root (keeps the original published URL)
+  en/index.html                    # English page, published at /en/
   sitemap.xml                      # every language URL, with xhtml:link hreflang alternates
   assets/icons/                    # favicon.ico, favicon.svg, apple-touch-icon.png
   css/style.css                    # all styles (language-independent)
@@ -22,8 +23,9 @@ site/                              # everything that gets published
   i18n/languages.json              # [{ "code", "name", "path" }] used by the language selector
   i18n/pt-BR/ui.json               # UI strings (flat "section.key": "text"; may hold trusted inline HTML)
   i18n/pt-BR/data.js               # content: books, sources, profiles, regions (ES module, `export default {...}`)
-  <code>/index.html                # future language pages, e.g. site/en/index.html
-  i18n/<code>/{ui.json,data.js}    # future language data
+  i18n/en/{ui.json,data.js}        # English UI strings and content (same keys, ids and structure as pt-BR)
+  <code>/index.html                # one page per extra language, e.g. site/en/index.html
+  i18n/<code>/{ui.json,data.js}    # data of each extra language
 ```
 
 There are no images in this site (the Tower and the icons are inline SVG in `app.js`).
@@ -41,9 +43,10 @@ loads `ui.json`, `data.js` and `languages.json`, injects the body skeleton (mark
 - Book/profile/region ids and the URL hash prefixes (`#livro-<id>`, `#fio-<id>`) are language-independent on purpose, so a link survives a language switch.
 - `ui.json` must contain `lang.label` (aria-label of the language selector).
 - `data.js` documents its own structure in the header comment; a translator must be able to produce a complete `data.js` for a new language alone.
-- The selector (`<select class="langsel">` inside `#langbar`) is always rendered, listing every entry of `languages.json` (a single entry today). There is no automatic redirect by browser language and no language memory in `localStorage`; do not add them.
+- Languages present: `pt-BR` (root) and `en` (`/en/`). In `en`, book titles and characters, places and concepts use King's original English names, so `title` equals `originalTitle` (the page then shows the original title only once); Brazilian-edition notes in `remark` are dropped. Links to Brazilian publisher pages keep their URLs and say "(Brazilian edition)" in the label.
+- The selector (`<select class="langsel">` inside `#langbar`) is always rendered, listing every entry of `languages.json` (Português and English today). There is no automatic redirect by browser language and no language memory in `localStorage`; do not add them.
 
-## How to add a language (e.g. `en`)
+## How to add a language (steps shown for `en`, which already exists and is the worked example)
 
 `app.js` must not need any edit.
 
