@@ -100,6 +100,8 @@ Wikipedia and the Stephen King Wiki are published under the CC BY-SA license and
 
 This is an unofficial, free, non-profit fan project. It is not affiliated with or endorsed by Stephen King, his agents or his publishers. All books, titles, characters, places and other elements mentioned belong to Stephen King and their respective rights holders, including Peter Straub and Richard Chizmar for the works written with them. No excerpts of the works are reproduced; the texts are summaries and commentary for reference purposes.
 
-## Copyright
+## License
 
-Copyright © 2026 GrandArchives. Texts, map, organization and design of this guide.
+Released under the [MIT License](LICENSE). Copyright © 2026 GrandArchives.
+
+The license covers the code and the original texts, map, organization and design of this project. The works, names, characters, places and trademarks it mentions belong to their respective authors and rights holders and are not covered by it; see the [disclaimer](#disclaimer).
