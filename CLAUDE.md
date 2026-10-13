@@ -5,7 +5,7 @@ Everything written into the repository (code, comments, commits, docs) stays in 
 
 ## What this repo is
 
-Static site published on GitHub Pages at `https://grandarchives.github.io/stephen-king/`: an interactive guide to the connections of Stephen King's multiverse.
+Static site published on GitHub Pages at `https://grand-archives.github.io/stephen-king/`: an interactive guide to the connections of Stephen King's multiverse.
 Plain HTML/CSS/JS only. **No build step, no framework, no dependencies.** The `GrandArchives` org shares this layout across its guide sites.
 
 ## Folder structure
@@ -57,7 +57,7 @@ loads `ui.json`, `data.js` and `languages.json`, injects the body skeleton (mark
 5. Add the new URL to `site/sitemap.xml` as a `<url>` with `xhtml:link` alternates for every language incl. `x-default`, and add the new alternate to the existing `<url>` entries.
 6. Test through a static server (never `file://`): no console errors, favicons 200, the selector appears on both pages and switches to the equivalent URL keeping hash and query.
 
-Head template (pt-BR root page shown; for `site/en/index.html` use `lang="en"`, `og:locale` `en_US`, `canonical`/`og:url` `https://grandarchives.github.io/stephen-king/en/`, English texts, and prefix every local path with `../`):
+Head template (pt-BR root page shown; for `site/en/index.html` use `lang="en"`, `og:locale` `en_US`, `canonical`/`og:url` `https://grand-archives.github.io/stephen-king/en/`, English texts, and prefix every local path with `../`):
 
 ```html
 <!doctype html>
@@ -67,17 +67,17 @@ Head template (pt-BR root page shown; for `site/en/index.html` use `lang="en"`, 
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Multiverso Stephen King: guia de conexões | GrandArchives</title>
 <meta name="description" content="...">
-<link rel="canonical" href="https://grandarchives.github.io/stephen-king/">
+<link rel="canonical" href="https://grand-archives.github.io/stephen-king/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GrandArchives">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:locale:alternate" content="en_US">   <!-- one per other language -->
 <meta property="og:title" content="...">
 <meta property="og:description" content="...">
-<meta property="og:url" content="https://grandarchives.github.io/stephen-king/">
-<link rel="alternate" hreflang="pt-BR" href="https://grandarchives.github.io/stephen-king/">
-<link rel="alternate" hreflang="en" href="https://grandarchives.github.io/stephen-king/en/">
-<link rel="alternate" hreflang="x-default" href="https://grandarchives.github.io/stephen-king/">
+<meta property="og:url" content="https://grand-archives.github.io/stephen-king/">
+<link rel="alternate" hreflang="pt-BR" href="https://grand-archives.github.io/stephen-king/">
+<link rel="alternate" hreflang="en" href="https://grand-archives.github.io/stephen-king/en/">
+<link rel="alternate" hreflang="x-default" href="https://grand-archives.github.io/stephen-king/">
 <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
